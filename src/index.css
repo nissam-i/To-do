@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  @apply antialiased text-gray-800;
+  /* Rich, deep animated gradient background */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Utilities */
+.glass {
+  @apply bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg;
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-2xl border border-white/20 shadow-xl rounded-2xl;
+}
+
+.glass-input {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 focus:bg-white/10 focus:border-white/30 transition-all duration-300 outline-none;
+}
+
+.glass-button {
+  @apply bg-white/20 hover:bg-white/30 active:bg-white/40 backdrop-blur-md border border-white/20 transition-all duration-200;
+}
