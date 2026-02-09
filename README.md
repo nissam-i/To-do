@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Premium To-Do App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning, premium To-Do application built with **React**, **TypeScript**, and **Tailwind CSS**. Designed with a focus on aesthetics, featuring **iOS-style glassmorphism**, smooth **Framer Motion** animations, and a responsive layout.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **💎 Premium UI**: Beautiful animated gradient background with glassmorphism effects for a modern, high-end feel.
+- **📱 Responsive Design**: Fully responsive and works perfectly on desktop, tablet, and mobile devices.
+- **⚡ Fast & Smooth**: Powered by Vite and framer-motion for butter-smooth interactions and zero lag.
+- **💾 Local Persistence**: Tasks are automatically saved to your browser's local storage, so you never lose your list.
+- **✅ Core Functionality**:
+  - Add new tasks effortlessly.
+  - toggle tasks as completed with a satisfying animation.
+  - Delete tasks with a hover-reveal action.
+  - Visual feedback for all interactions.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these steps to get the project running on your local machine.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/nissam-i/To-do.git
+    cd To-do
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:5173](http://localhost:5173) in your browser to see the app.
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+```
+todo-app/
+├── src/
+│   ├── components/
+│   │   ├── TodoInput.tsx    # Input field component
+│   │   └── TodoItem.tsx     # Individual todo item component
+│   ├── App.tsx              # Main application logic
+│   ├── index.css            # Global styles & Tailwind config
+│   ├── main.tsx             # Entry point
+│   └── types.ts             # TypeScript definitions
+├── index.html
+├── package.json
+├── postcss.config.js
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Customization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+You can customize the gradients and glassmorphism effects in `src/index.css`. The font used is **Inter** from Google Fonts, which can be changed in `index.html` and `src/index.css`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+Made with ❤️ by [nissam-i](https://github.com/nissam-i)
