@@ -79,4 +79,3 @@ You can customize the gradients and glassmorphism effects in `src/index.css`. Th
 
 ---
 
-Made with ❤️ by [nissam-i](https://github.com/nissam-i)
